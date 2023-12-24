@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --background: #282a36;
+    --background-secondary: #242631;
+    --background-light: #363945;
+    --primary: #bd93f9;
+    --accent: rgba(189, 147, 249, 0.2);
+    --secondary: rgba(189, 147, 249, 0.35);
+    --alt: rgba(189, 147, 249, 0.5);
+    --alt-light: #7b49c0;
+    --alt-accent-light: #d4b5ff;
+    --text: #dee7f9;
+    --text-secondary: #80848e;
+    --input: #383a40;
+}
+.dark-theme {
+    --text: #dee7f9;
+    --background: #070a08;
+    --lightbgblue: #12263f;
+    --headerDark: #dee7f9;
+}
+
+button:focus {outline:none;}
+button:focus {box-shadow:none !important;}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#root {
+  background: var(--background);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+.sidebar {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: var(--background-secondary);
+    min-width: 15rem;
+    max-width: 15rem;
+    padding-top: 1rem;
+}
+.Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.Logo h2 {
+    color: var(--primary);
+}
+.Logo p {
+    color: var(--alt-accent-light);
+}
+.sidebarButton {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    border: none;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.SideBarSelected {
+    color: var(--primary);
+}
+
+
+/* wrappers */
+
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.UpperPageWrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.LowerPageWrapper{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-height: 7rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-secondary);
+}
+
+.AddPlaylistBut {
+  padding: 0;
+  background-color: transparent;
+  margin: 0;
+}
+
+
+.PlaylistNames {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* playlists (sidebar) */
+.Playlists{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.PlaylistButtons {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+}
+
+.PlaylistBut {
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    background-color: var(--background-secondary);
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+.PlaylistBut:hover {
+    color: var(--alt-accent-light);
+}
+
+.SidebarTitles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#PlaylistTile {
+  display: flex;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* lowerbody song */
+
+.SongStats {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between; /* Add this line */
+    align-items: center; /* Add this line */
+}
+
+.SongInfo {
+    display: flex;
+    flex-direction: row;
+}
+.SongInfo,
+.SongActions,
+.SongSettings {
+    display: flex;
+    flex: 1;
+}
+
+.songPicture {
+    height: 4.5rem;
+    width: 4.5rem;
+    overflow: hidden;
+    margin-left: 1rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.songPicture img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.SongText{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.songTitle {
+    color: var(--primary);
+}
+.songAuthor {
+    font-size: 13px;
+}
+.SongActions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+
+}
+.SongSettings {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.ActionButton {
+    padding: 0;
+    border: none;
+    background-color: var(--background-secondary);
+    color: var(--text);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.muteButton {
+    padding: 0;
+    border: none;
+    background-color: var(--background-secondary);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.volumeSliderDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.volumeSlider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 5px;
+    background-color: var(--background-light);
+    outline: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensure the slider thumb is above the bar */
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+.volumeSlider:hover::-webkit-slider-thumb {
+    visibility: visible;
+}
+
+.SongBorderValue {
+    height: 0.2rem;
+    min-height: 0.2rem;
+    width: 100%;
+    background-color: var(--text-secondary);
+    position: relative;
+
+}
+
+.ProgressBar {
+    height: 100%;
+    width: 0%; /* Adjust this value based on the progress you want to show */
+    background-color: var(--primary); /* You can set the color for the progress bar */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#playButton {
+    color: var(--primary);
+}
+
+
+
+/*SLIDER SHIT*/
+.SongBorderValue:hover .ProgressBarSlider::-webkit-slider-thumb {
+  visibility: visible;
+}
+
+.ProgressBarSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 5px;
+  background-color: var(--background-light);
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1; /* Ensure the slider thumb is above the bar */
+}
+
+.ProgressBarSlider::-webkit-slider-thumb {
+  visibility: hidden;
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.ProgressBar {
+  position: absolute;
+  top: 0;
+  width: 0%;
+  height: 0.3rem;
+  background: var(--primary);
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 0 10px 10px 0;
+}
+
+
+
+
+
+
+.volumeSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 5px;
+  background-color: var(--background-light);
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* Ensure the slider thumb is above the bar */
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.volumeSlider:hover::-webkit-slider-thumb {
+  visibility: visible;
+}
+
+
+/* PLAYLIST SHIT*/
+
+.songInfos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.DeleteSongBut {
+  padding: 0;
+  background-color: transparent;
+  margin: 0;
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevent line breaks on the button */
+}
+
+
+
+.MainPage {
+  width: 90%;
+  height: 100%;
+}
+
+.PlaylistWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  padding: 1rem;
+  width: 95%;
+  height: 100%;
+}
+
+.PlaylistInfo {
+  display: flex;
+  align-items: center;
+}
+.PlaylistImgContainer {
+  margin-right: 5rem;
+  display: flex;
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.PlaylistImgContainer img {
+  width: 100%;
+  height:100%;
+}
+
+.PlaylistNameInfo {
+  color: var(--text);
+  font-size: 2.5rem;
+}
+
+.SongList {
+  margin-top: 1rem;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.songsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.WarningShowName {
+  color: var(--primary);
+}
+
+.PlaySongButton {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+}
+
+.TitlesAndAuthors {
+  margin: 0;
+  display: flex;
+  margin-left: 1rem;
+  text-align: left;
+
+
+  flex-direction: column;
+}
+
+.SongXName {
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+}
+
+.songAuthors {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  padding: 0;
+}
+
+.DurationInMs {
+  margin: 0;
+  margin-left: auto;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}

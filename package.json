@@ -1,0 +1,63 @@
+{
+  "name": "ven-music",
+  "private": true,
+  "productName": "Ven Music",
+  "author": "citam",
+  "version": "1.0.1",
+  "description": "Wow great music app",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "electron-packager": "^17.1.2",
+    "electron-updater": "^6.1.7",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.6",
+    "vite-tsconfig-paths": "^4.2.2"
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.1.1",
+    "@types/electron": "^1.6.10",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.4",
+    "eslint": "^8.48.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-electron": "^0.14.0",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  },
+  "main": "dist-electron/main.js",
+  "build": {
+    "productName": "Ven Music",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*" 
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "citam1",
+        "repo": "ven-music"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "playlists": [
+    {
+      "name": "IDK",
+      "songs": [
+        {
+          "name": "Aurorian Dance",
+          "artist": "skoomy",
+          "durationMS": 274665
+        },
+        {
+          "name": "Do Ya Like X Resonance - Sped Up",
+          "artist": "noturgf",
+          "durationMS": 274665
+        },
+        {
+          "name": "See You Again - okay okay, la la la part loop",
+          "artist": "ImXgine & ONIBI",
+          "durationMS": 62002
+        }
+      ]
+    }
+  ]
+}
